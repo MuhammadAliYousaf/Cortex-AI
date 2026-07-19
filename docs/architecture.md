@@ -45,4 +45,4 @@ Hosts Razor Pages, Bootstrap 5 UI assets, dependency-injection composition, and 
 
 ## Current state
 
-This document is an architectural baseline. The solution projects, database schema, Compose file, and application features are not implemented yet.
+The solution projects, Docker Compose configuration, ASP.NET Core Identity integration, and administrator seeding are implemented. Application features beyond authentication are still to be built.

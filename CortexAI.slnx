@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CortexAI.Application/CortexAI.Application.csproj" />
+    <Project Path="src/CortexAI.Domain/CortexAI.Domain.csproj" />
+    <Project Path="src/CortexAI.Infrastructure/CortexAI.Infrastructure.csproj" />
+    <Project Path="src/CortexAI.Web/CortexAI.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CortexAI.Application.Tests/CortexAI.Application.Tests.csproj" />
+    <Project Path="tests/CortexAI.Domain.Tests/CortexAI.Domain.Tests.csproj" />
+  </Folder>
+</Solution>

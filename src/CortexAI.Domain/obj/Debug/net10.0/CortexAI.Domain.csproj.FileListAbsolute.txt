@@ -1,0 +1,12 @@
+D:\Projects\Cortex AI\src\CortexAI.Domain\bin\Debug\net10.0\CortexAI.Domain.deps.json
+D:\Projects\Cortex AI\src\CortexAI.Domain\bin\Debug\net10.0\CortexAI.Domain.dll
+D:\Projects\Cortex AI\src\CortexAI.Domain\bin\Debug\net10.0\CortexAI.Domain.pdb
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\CortexAI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\CortexAI.Domain.AssemblyInfoInputs.cache
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\CortexAI.Domain.AssemblyInfo.cs
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\CortexAI.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\CortexAI.Domain.sourcelink.json
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\CortexAI.Domain.dll
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\refint\CortexAI.Domain.dll
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\CortexAI.Domain.pdb
+D:\Projects\Cortex AI\src\CortexAI.Domain\obj\Debug\net10.0\ref\CortexAI.Domain.dll

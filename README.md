@@ -26,4 +26,10 @@ Version 1.0 is in initial development on the `v1.0` branch. The solution structu
 
 ## Getting started
 
-Setup instructions will be added alongside the initial ASP.NET Core solution and Docker Compose configuration.
+1. Copy `.env.example` to `.env` and replace the example passwords.
+2. Start the application and PostgreSQL with `docker compose up --build`.
+3. Open `http://localhost:8080` and sign in at `/Identity/Account/Login` with the default admin email and password configured in `.env`.
+
+For local development outside Docker, set `ConnectionStrings__CortexAI`, `DefaultAdmin__Email`, and `DefaultAdmin__Password` in your environment or user secrets before running `dotnet run --project src/CortexAI.Web`.
+
+The database schema is managed with EF Core migrations. The application applies pending migrations at startup, then creates the configured administrator account if it does not exist.
