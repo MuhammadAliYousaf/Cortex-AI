@@ -14,7 +14,7 @@ Version 1.0 will use:
 - ASP.NET Core Razor Pages for the web UI
 - Clean Architecture with Domain, Application, Infrastructure, and Web boundaries
 - PostgreSQL in Docker Compose for local development
-- Entity Framework Core for data access and migrations
+- Entity Framework Core for data access and migrations, using Repository and Specification patterns to keep query and persistence concerns out of application use cases
 - the OpenAI .NET SDK for AI-provider integration
 - Bootstrap 5 for UI styling
 - Serilog for structured logging
@@ -24,5 +24,6 @@ Version 1.0 will use:
 
 - Application and domain logic can be tested without requiring a running web host or database.
 - External integrations are isolated in Infrastructure, improving replacement and testability options.
+- Repositories and specifications prevent application use cases from becoming coupled to EF Core query APIs, at the cost of maintaining persistence abstractions.
 - The initial solution has more projects and dependency boundaries than a single-project application, which adds setup overhead but keeps growth manageable.
 - Docker Compose becomes the standard local path for starting PostgreSQL.

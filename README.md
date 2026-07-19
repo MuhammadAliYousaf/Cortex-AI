@@ -12,6 +12,7 @@ Version 1.0 is in initial development on the `v1.0` branch. The solution structu
 - Clean Architecture
 - PostgreSQL via Docker Compose
 - Entity Framework Core
+- Repository and Specification patterns
 - OpenAI .NET SDK
 - Bootstrap 5
 - Serilog

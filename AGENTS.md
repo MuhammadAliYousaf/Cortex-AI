@@ -19,6 +19,7 @@ Active development happens on the `v1.0` branch. The project is in its initial s
 ## Working conventions
 
 - Keep domain logic independent of infrastructure, web UI, database, and SDK concerns.
+- Use Repository and Specification patterns for persistence access. Keep repository abstractions in the core layer and EF Core implementations in Infrastructure; application use cases must not query `DbContext` directly.
 - Keep secrets out of source control. Use environment variables and provide safe names in `.env.example` when configuration is introduced.
 - Add or update xUnit tests for behavior changes where practical.
 - Use EF Core migrations for schema changes; never hand-edit a production database.
