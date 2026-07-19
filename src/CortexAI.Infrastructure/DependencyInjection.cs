@@ -10,7 +10,7 @@ namespace CortexAI.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IdentityBuilder AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("CortexAI")
             ?? throw new InvalidOperationException("Connection string 'CortexAI' is not configured.");
@@ -18,7 +18,7 @@ public static class DependencyInjection
         services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
         services.Configure<DefaultAdminOptions>(configuration.GetSection(DefaultAdminOptions.SectionName));
 
-        services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+        var identityBuilder = services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.Password.RequiredLength = 12;
@@ -28,10 +28,9 @@ public static class DependencyInjection
                 options.Password.RequireNonAlphanumeric = true;
             })
             .AddEntityFrameworkStores<ApplicationDbContext>()
-            .AddDefaultUI()
             .AddDefaultTokenProviders();
 
         services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-        return services;
+        return identityBuilder;
     }
 }

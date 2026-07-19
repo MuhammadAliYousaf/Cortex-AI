@@ -14,7 +14,7 @@ builder.Host.UseSerilog((context, services, loggerConfiguration) => loggerConfig
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Configuration).AddDefaultUI();
 
 var app = builder.Build();
 
