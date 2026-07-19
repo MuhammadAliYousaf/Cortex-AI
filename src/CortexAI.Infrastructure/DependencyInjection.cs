@@ -28,6 +28,7 @@ public static class DependencyInjection
                 options.Password.RequireNonAlphanumeric = true;
             })
             .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultUI()
             .AddDefaultTokenProviders();
 
         services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
