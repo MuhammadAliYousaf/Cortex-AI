@@ -1,6 +1,7 @@
 using CortexAI.Infrastructure;
 using CortexAI.Infrastructure.Identity;
 using CortexAI.Infrastructure.Persistence;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -14,7 +15,19 @@ builder.Host.UseSerilog((context, services, loggerConfiguration) => loggerConfig
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddInfrastructure(builder.Configuration).AddDefaultUI();
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+    {
+        options.SignIn.RequireConfirmedAccount = false;
+        options.Password.RequiredLength = 12;
+        options.Password.RequireDigit = true;
+        options.Password.RequireLowercase = true;
+        options.Password.RequireUppercase = true;
+        options.Password.RequireNonAlphanumeric = true;
+    })
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
